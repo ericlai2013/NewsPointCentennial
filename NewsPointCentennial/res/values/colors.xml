@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="logo_color">#FFB800</color>
+    <color name="team_color">#F0F0F0</color>
+    <color name="team_bkgrd">#080B74</color>
+</resources>
