@@ -1,20 +1,16 @@
 package com.haroon.newspointcentennial;
 
-import android.app.Activity;
-import java.util.ArrayList;
-import java.util.List;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.view.View.OnClickListener;
-import android.widget.Spinner;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ImageButton;
+import android.widget.Spinner;
 
 
 
@@ -645,4 +641,76 @@ public class MainActivity extends M_Activity implements OnItemSelectedListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
+	///////////////// Login Functionality ///////////////
+	
+	private final int LOGIN_REQUEST_CODE = 1;
+	private boolean loggedIn = false;
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId())
+		{
+		case R.id.settingsMenuItem:
+		{
+			Intent intent = new Intent(MainActivity.this, UserPreferenceActivity.class);
+			startActivity(intent);			
+			
+			break;
+		}		
+		case R.id.loginMenuItem:
+		{
+			if (loggedIn == false) {
+				Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+				startActivityForResult(intent, LOGIN_REQUEST_CODE);
+			}
+			else {
+				loggedIn = false;
+			}
+			
+			invalidateOptionsMenu();
+			break;
+		}
+		default: 
+			Log.e("NewsPoint", "Unknown Menu Item");
+			break;
+		}
+		
+		return super.onOptionsItemSelected(item);
+	}
+
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		
+		if (requestCode == LOGIN_REQUEST_CODE) {
+			if (resultCode == RESULT_OK) {
+				loggedIn = true;
+				invalidateOptionsMenu(); // make onPrepareOptionsMenu() to be fired
+				
+				// String userName = data.getStringExtra("userName");
+				// TextView loginStatus = (TextView) findViewById(R.id.loginStatus);
+				// loginStatus.setText("Logged in as  " + userName);
+			}
+		}
+		
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
+	@Override
+	public boolean onPrepareOptionsMenu (Menu menu) {
+		
+		MenuItem loginMenuItem = menu.findItem(R.id.loginMenuItem);
+		MenuItem settingsMenuItem = menu.findItem(R.id.settingsMenuItem);
+		
+		if (loggedIn) {
+			loginMenuItem.setTitle("Log out");
+			settingsMenuItem.setEnabled(true);
+	    }
+		else {
+			loginMenuItem.setTitle("Log in");
+			settingsMenuItem.setEnabled(false);
+		}
+		
+		return true;
+	}	
 }
