@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference android:dialogTitle="Items per Screen" android:dialogMessage="Enter number of items per screen" android:key="itemsPerScreen" android:title="Number of items per screen"/>
+    
+
+</PreferenceScreen>

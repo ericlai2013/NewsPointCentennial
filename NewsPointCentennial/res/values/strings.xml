@@ -4,115 +4,98 @@
     <string name="app_name">NP</string>
     <string name="action_settings">Settings</string>
     <string name="hyperlink">http://www.cnn.com/</string>
-    
-    
     <string name="category_prompt">Category</string>
-    
+
     <string-array name="category_arrays_01">
         <item>Category</item>
         <item>News</item>
         <item>Sports</item>
         <item>World</item>
     </string-array>
-    
     <string-array name="category_arrays_02">
         <item>Category</item>
         <item>News</item>
         <item>Sports</item>
         <item>Travel</item>
     </string-array>
-    
     <string-array name="category_arrays_03">
         <item>Category</item>
         <item>News</item>
         <item>Autos</item>
         <item>Health</item>
     </string-array>
-    
     <string-array name="category_arrays_04">
         <item>Category</item>
         <item>News</item>
         <item>Politics</item>
         <item>Business</item>
     </string-array>
-    
     <string-array name="category_arrays_05">
         <item>Category</item>
         <item>Business</item>
         <item>World</item>
         <item>Living</item>
     </string-array>
-    
     <string-array name="category_arrays_06">
         <item>Category</item>
         <item>Justice</item>
         <item>Tech</item>
         <item>Travel</item>
     </string-array>
-    
     <string-array name="category_arrays_07">
         <item>Category</item>
         <item>News</item>
         <item>Weather</item>
         <item>Travel</item>
     </string-array>
-    
     <string-array name="category_arrays_08">
         <item>Category</item>
         <item>News</item>
         <item>Lifestyle</item>
         <item>Entertainment</item>
     </string-array>
-    
     <string-array name="category_arrays_09">
         <item>Category</item>
         <item>Life</item>
         <item>Sports</item>
         <item>Business</item>
     </string-array>
-    
     <string-array name="category_arrays_10">
         <item>Category</item>
         <item>News</item>
         <item>Sports</item>
         <item>Blogs</item>
     </string-array>
-    
     <string-array name="category_arrays_11">
         <item>Category</item>
         <item>News</item>
         <item>Politics</item>
         <item>Science</item>
     </string-array>
-    
     <string-array name="category_arrays_12">
         <item>Category</item>
         <item>News</item>
         <item>Investing</item>
         <item>Arts</item>
     </string-array>
-    
     <string-array name="category_arrays_13">
         <item>Category</item>
         <item>News</item>
         <item>Money</item>
         <item>Opinion</item>
     </string-array>
-    
     <string-array name="category_arrays_14">
         <item>Category</item>
         <item>News</item>
         <item>Maps</item>
         <item>Finance</item>
     </string-array>
-    
     <string-array name="category_arrays_15">
         <item>Category</item>
         <item>News</item>
         <item>Life</item>
         <item>Driving</item>
     </string-array>
-    
     <string-array name="category_arrays_16">
         <item>Category</item>
         <item>Shows</item>
@@ -124,6 +107,8 @@
     <string name="app_logo_bottom">Technology\nCulture\nSport\nMusic</string>
     <string name="app_team_group">COMP231 - SUMMER - 2013\n
         Team Members: \nFahmi B, Eshaq\nHaroon Munsif\nClaudia Quezada\nHarry Dholakiya\nEric Lai</string>
-    
-    
+    <string name="title_activity_login">Login to your Account</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loginMenuText">Log in</string>
+
 </resources>
